@@ -10,13 +10,13 @@ function validateResponse(response){
 	return response
 }
 
-function readAsJson(response){
+
+/* function readAsJson(response){
 	return response.json()
 	console.log(response.json())
 }
 
-
-/*
+*/
 function displayLogo(responseAsBlob){
 	return responseAsBlob.weather.icon.blob()
 	let imgContainer = document.getElementById('weather-logo');
@@ -25,8 +25,6 @@ function displayLogo(responseAsBlob){
 	imgElement.src = imgUrl;
 	console.log(responseAsBlob.weather.icon);
 }
-
-*/
 
 
 function logError(err){
@@ -38,9 +36,9 @@ function fetchContent(){
 	cityName = document.getElementById('search-text').value;
 	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&units=metric`)
 	.then(validateResponse)
-	.then(detailAsJson)
-	.then(function(data) {
-		displayDetail(data)
+	.then(displayDetail)
+	.then((data)=> {
+		const []
 	})
 //	.then(displayLogo)
 	//.then(showLogo)
@@ -55,12 +53,8 @@ function detailAsJson(response){
 function displayDetail(response){
 	detail = response.weather[0]
 	main = response.main
-	return weatherDetail.map(function(detail, main) {
-		temp_description.innerHTML = detail.weather[0].description;
-		console.log(detail);
-	})
-	temp_description.innerHTML = response.weather[0].description;
-	console.log(response.weather[0].description)
+	temp_description.innerHTML = detail.description;
+	console.log(detail)
 	
 }
 function showLogo(imgage){

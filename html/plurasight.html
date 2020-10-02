@@ -7,6 +7,7 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../js/search.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="../css/plurasight.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
@@ -20,9 +21,9 @@
 	<script type="text/javascript">
 		if ('serviceWorker' in navigator) {
 			window.addEventListener('load', ()=>{
-				navigator.serviceWorker.register('/js/service-worker.js')
-				.then(response =>{
-					console.log('registration suceesful', response)
+				navigator.serviceWorker.register('js/service-worker.js')
+				.then(registration =>{
+					console.log('registration suceesful', registration)
 				})
 				.catch(err =>{
 					console.log('error during registration', err)
@@ -42,38 +43,46 @@
 
 		<div class="container">
 			<div class="row">
-				<div id="content" class="form-row col-sm-9 col-lg-9 col-md-9">
-					<form action="" id="myform" method="get">
-						<input id="search-text"  class="form-control" type="text" name="" placeholder="Enter your City here">
-						<input type="submit"  id="search-btn" class="form-control btn btn-success" value="search" name="search">
-					</form>
+				<div id="search-form">
+					<div id="content" class="form-row col-sm-9 col-lg-9 col-md-9">
+						<form action="" id="myform" method="get">
+							<input id="search-text"  class="form-control" type="text" name="" placeholder="Enter your City here">
+							<input type="submit"  id="search-btn" class="form-control btn btn-success" value="search" name="search">
+						</form>
+						<span id="msg"> </span>
+					</div>
 				</div>
 			</div>	
+
 			<div class="row" id="details">
 				<div class="col-md-3 col-sm-3 col-lg-3">
-					<span id="date"><h3></h3></span>
+					
+
+
+
+					</div>
 				</div>
 				<div class="col-sm-6 col-md-6 col-lg-4">
-					<div class="row"> 
-						<div id="weather-logo"></div>
-						<div class="col-sm-2 col-lg-2 col-md-1 "><h3>date</h3></div>
-						<div class="col-sm-4 col-lg-4 col-md-3 "><h3></h3></div>
-					</div>
-					<div class="row"> 
-						<div id="weather-data">
-						<div class="col-sm-2 col-lg-2 col-md-2 "><h3>temp</h3></div>
-						<div class="col-sm-4 col-lg-4 col-md-4 "><h3 id="temp-desc"></h3></div>	
-					</div>
+					<ul class="weather-details">
+
+					</ul>
+
+					<div id="report">
+						<p id="citi"></p>
+						<p id="temp"></p>
+						<figure id="imgElement">
+							<figcaption id="mycaption"></figcaption>		
+						</figure>
+
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<div id="date">
-			<div>
-		</div>
+		
 </div>
-	<script type="text/javascript" src="../js/main.js" defer></script>
+	<script type="text/javascript" src="../js/cache.js" defer></script>
+
 		
 </body>
 </html>

@@ -1,7 +1,4 @@
 
-
-
-
 @media(max-width: 1400px){
 	.background{
 		background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
@@ -16,6 +13,10 @@
 	#list{
 		display: flex;
 		margin-bottom: 30px;
+	}
+
+	#date{
+		display: inline;
 	}
 
 	.boxes{
