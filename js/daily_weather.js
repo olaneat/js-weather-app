@@ -10,9 +10,11 @@ let caption = document.getElementById('mycaption')
 form.addEventListener('submit', event =>{
 	event.preventDefault();
 	var weatherReport = list.querySelectorAll('.weather-report')
-	const key  = '89aa259c6e0fd4e27dc153c0c608ebfc';
-	cityName = input.value;
-	let url = (`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&units=metric`)
+  const key  = '89aa259c6e0fd4e27dc153c0c608ebfc';
+  const days = 5;
+  cityName = input.value;
+  
+	let url = (`https://api.openweathermap.org/data/2.5/forecast/daily?q=${cityName}&mode=xml&units=metric&cnt=${days}&appid=${key}`)
 	fetch(url)
 	.then(response => response.json())
 	.then(data => {

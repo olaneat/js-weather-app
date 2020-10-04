@@ -4,8 +4,10 @@
 	<title>Neat Weather app</title>
 	<meta charset="utf-8" name="viewport" content="inital-scale=1, maximum-scale=1, width=device-width user-scalable=0" />
 
-	<script type="text/javascript" src="../js/search.js" defer></script>
+	<script type="text/javascript" src="../js/daily_weather.js" defer></script>
 	<script type="text/javascript" src="../js/main.js" defer></script>
+	<script type="text/javascript" src="../js/cache.js" defer></script>	
+
 
 	<link rel="stylesheet" type="text/css" href="../css/plurasight.css">
 	<link rel="apple-touch-icon" sizes="180x180" href="../icons/apple-touch-icon.png">
@@ -39,8 +41,19 @@
 			<div class="box5 boxes"></div>
 		</div>
 		<navbar id="mynav">
-		<p>neat Weather App</p>
-			
+		myCity Weather App
+			<ul>
+				<li>
+					<a href="plurasight.html">
+						Home
+					</a>
+				</li>
+				<li>
+					<a href="more.html">
+						get 4days Weather
+					</a>
+				</li>
+			</ul>	
 		</navbar>	
 		<div class="row">
 			<div id="search-form">
@@ -68,14 +81,13 @@
 					</figure>
 				</div>
 			</div>
-			
-		</div>	
-	</div>
-	<script type="text/javascript" src="../js/cache.js" defer></script>	
-</body>
-<div id="footer">
+			<div id="footer">
 				Made by <a target="_blank" href="https://codepen.io/olaneat/full/mdPYmbK">olaNeat</a>
 			</div>
+		</div>	
+	</div>
+</body>
+
 
 
 </html>

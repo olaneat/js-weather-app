@@ -1,71 +1,28 @@
-const searchButton = document.getElementById('search-btn');
-const temp_description = document.getElementById('temp-desc');
-const myData = document.getElementById('weather-data');
-let weatherDetail = document.getElementById('details');
+let currentTime = document.getElementById('currentTime');
 
-function validateResponse(response){
-	if (!response.ok) {
-		throw Error(response.statusText)
+
+function myClock(){
+	var time = new Date()
+	var hours = time.getHours();
+	var mins = time.getMinutes();
+	var secs = time.getSeconds(); 
+
+	var newHour = updateTime(hours);
+	var newMins = updateTime(mins);
+	var newSecs = updateTime(secs)
+	currentTime.innerHTML = `${newHour}:${newMins}:${newSecs} ` 
+	var t = setTimeout(myClock, 1000)
+
+	function updateTime(i){
+		if (i < 10) {
+			return '0' + i;
+		}
+		else{
+			return i;
+		}
 	}
-	return response
 }
+window.addEventListener('load', myClock)
 
 
-/* function readAsJson(response){
-	return response.json()
-	console.log(response.json())
-}
 
-*/
-function displayLogo(responseAsBlob){
-	return responseAsBlob.weather.icon.blob()
-	let imgContainer = document.getElementById('weather-logo');
-	let imgElement = imgContainer.appendChild('img');
-	let imgUrl = URL.createObjectURL('responseAsBlob.weather[0].icon');
-	imgElement.src = imgUrl;
-	console.log(responseAsBlob.weather.icon);
-}
-
-
-function logError(err){
-	console.log('some Error has occured', err)
-}
-
-function fetchContent(){
-	const key  = '89aa259c6e0fd4e27dc153c0c608ebfc';
-	cityName = document.getElementById('search-text').value;
-	fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${key}&units=metric`)
-	.then(validateResponse)
-	.then(displayDetail)
-	.then((data)=> {
-		const []
-	})
-//	.then(displayLogo)
-	//.then(showLogo)
-	//.then(readAsJson)
-	//.then(logResult)
-	.catch(logError)
-}
-function detailAsJson(response){
-	return response.json();
-}
-
-function displayDetail(response){
-	detail = response.weather[0]
-	main = response.main
-	temp_description.innerHTML = detail.description;
-	console.log(detail)
-	
-}
-function showLogo(imgage){
-	let imgContainer = document.getElementById('Weather-logo');
-	let imgElement = imgContainer.appendChild('img');
-	let imgSrc = URL.createObjectURL(displayLogo)
-	imgElement.src = imgSrc;
-}
-
-function logResult(result){
-	console.log('result fetched successfully', result)
-}
-
-searchButton.addEventListener('click', fetchContent)
