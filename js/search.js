@@ -26,6 +26,19 @@ form.addEventListener('submit', event =>{
 		imgElement = document.createElement('img')
 		imgElement.setAttribute('src', icon)
 		imgContainer.appendChild(imgElement)
+		
+		/*
+		var imgElement = document.createElement('img')
+		imgElement.setAttribute('src', icon)
+		var imgArray = new Array()
+		imgArray = imgElement;
+		if (imgArray > 1) {
+			imgContainer.appendChild(imgArray[-1])
+		} else{
+			imgContainer.appendChild(imgElement)
+		}
+		*/
+
 		caption.innerHTML = `${weather[0]['description']}`
 	})
 	.catch( err =>{
