@@ -1,0 +1,338 @@
+/*
+styles for large devices 
+*/
+@media(min-width: 800px){
+	#mynav{
+		position: absolute;
+		width: 100%;
+		height: 10%;
+		top: 0%;
+		background-color: silver;
+
+	}
+	#mynav p{
+		padding: 1% ;
+		color: #000;
+		font-family: cursive;
+		font-weight: bold;
+		font-size: 1em;
+	}
+
+	#row{
+		display: flex;
+		flex-direction: column;
+		margin: 10%;
+		height:auto;
+	}
+
+	#clock{
+		width: 100%;
+		margin: 0% 7% 10% 7%;
+		height: auto;
+	}
+
+	#currentTime{
+		background-color: rgba(0, 0, 0, 0.4);
+		color: #ffeee6;
+		padding: 3%;
+		font-family: 'Orbitron', sans-serif;
+		font-size: 7rem;
+		font-weight: bolder;
+	}
+
+
+	#details{
+		width: auto;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: linen;
+		margin: auto;
+	}
+	#details div{
+		padding: 15%;
+	}
+
+	.background{
+		background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+		width:100%;
+		height:100%;
+		position: fixed;
+		top: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#list{
+		display: flex;
+		margin-bottom: 30px;
+	}
+
+
+
+	.boxes{
+		height: 10px;
+		width: 10px;
+		border-radius: 50%;
+		animation-iteration-count: infinite;
+		background-color: #fff;
+
+	}
+
+	.box1{
+		animation-name: twinkle;
+		margin-left: 10%;
+		margin-top: 10%;
+		animation-duration: 1s;
+		display:inline-block;
+	}
+
+	.box2{
+		animation-name: twinkle;
+		margin-left: 20%;
+		margin-top: 7%;
+		animation-duration: 1s;
+
+	}
+
+	.box3{
+		animation-name: twinkle;
+		margin-left: 30%;
+		margin-top: 10%;
+		animation-duration: 1s;
+	}
+
+	.box4{
+		animation-name: twinkle;
+		margin-left: 10%;
+		margin-top: 7%;
+		animation-duration: 1s;
+
+	}
+
+	.box5{
+		animation-name: twinkle;
+		margin-left: 20%;
+		margin-top: 10%;
+		animation-duration: 1s;
+
+	}
+
+	@keyframes twinkle{
+		25%{
+			opacity: 0.5;
+			transform: scale(0.5);
+		
+	}
+}
+	#content{
+		margin: 10% 10% 5% 30%;
+		width: 70%;
+		
+	}	
+
+	form{
+		margin: auto ;
+		width: auto;
+		height: auto;
+	}
+
+	#footer{
+		margin:0%;
+		background-color: green;
+		width: 100px;
+		height: 20px;
+	}
+	[type="submit"]{
+		background-color: #10fd01;
+		padding: 2%;
+		
+	}
+
+	[type="text"]{
+		background-color: #fff;
+		padding: 2%;
+	
+	}
+
+	li a{
+		color: #000;
+		text-decoration:none;
+		font-size: 1.6rem;
+	}
+	a:hover{
+		color:rgba(151, 140, 124, 0.5);
+	}
+
+	#footer{
+		background-color: #000;
+		color: white;
+		position: absolute;
+		width: 100%;
+		bottom: 0%;
+	}
+}
+
+/*
+styles for small width devices 
+*/
+
+@media(max-width:798px){
+	#mynav{
+		position: absolute;
+		width: 100%;
+		height: 10%;
+		top: 0%;
+		background-color: silver;
+
+	}
+	#mynav p{
+		padding: 1% ;
+		color: #000;
+		font-family: cursive;
+		font-weight: bold;
+		font-size: 1em;
+	}
+
+
+	#row{
+		display: flex;
+		flex-direction: column;
+		margin-top:10%
+	}
+
+	#clock{
+		width: auto;
+		margin: 0% 7% 10% 7%;
+		height: auto;
+	}
+
+	#currentTime{
+		background-color: rgba(0, 0, 0, 0.4);
+		color: #ffeee6;
+		padding: 3%;
+		font-family: 'Orbitron', sans-serif;
+		font-size: 5rem;
+		font-weight: bolder;
+	}
+
+	.background{
+		background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
+		width:100%;
+		height: 100%;
+		position: fixed;
+		top: 0px;
+		margin: 0px;
+		padding: 0px;
+	}
+
+	#list{
+		display: flex;
+		margin-bottom: 30px;
+	}
+
+	#details{
+		width: auto;
+		height: auto;
+		background-color: rgba(0, 0, 0, 0.4);
+		color: linen;
+		margin: auto;
+	}
+
+	#details div{
+		padding: 15%
+	}
+
+	.boxes{
+		height: 10px;
+		width: 10px;
+		border-radius: 50%;
+		animation-iteration-count: infinite;
+		background-color: #fff;
+
+	}
+	
+	.box1{
+		animation-name: twinkle;
+		margin-left: 10%;
+		margin-top: 27%;
+		animation-duration: 1s;
+		display:inline-block;
+	}
+
+	.box2{
+		animation-name: twinkle;
+		margin-left: 20%;
+		margin-top: 22%;
+		animation-duration: 1s;
+
+	}
+
+	.box3{
+		animation-name: twinkle;
+		margin-left: 30%;
+		margin-top: 27%;
+		animation-duration: 1s;
+	}
+
+	.box4{
+		animation-name: twinkle;
+		margin-left: 10%;
+		margin-top: 22%;
+		animation-duration: 1s;
+
+	}
+
+	.box5{
+		animation-name: twinkle;
+		margin-left: 20%;
+		margin-top: 20%;
+		animation-duration: 1s;
+
+	}
+
+	@keyframes twinkle{
+		25%{
+			opacity: 0.5;
+			transform: scale(0.5);
+		
+	}
+}
+	#content{
+		margin: auto;
+		width: 70%;
+		height: 70%;
+		
+	}	
+
+	form{
+		margin-top: 40% ;
+		height: auto;
+	}
+
+	[type="submit"]{
+		width: 100%;
+		background-color: #10fd01;
+		padding: 3%;
+	}
+
+	[type="text"]{
+		width: 100%;
+		background-color: #fff;
+		margin-bottom: 2%;
+		padding: 3%
+	}
+
+	
+	li a{
+		color: #000;
+		text-decoration:none;
+	}
+
+	#footer{
+		background-color: #000;
+		color: white;
+		position: absolute;
+		width: 100%;
+		bottom: 0%;
+	}
+}
