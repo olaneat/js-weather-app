@@ -55,7 +55,6 @@ styles for large devices
 	.background{
 		background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
 		width:100%;
-		height:100%;
 		position: fixed;
 		top: 0px;
 		margin: 0px;
@@ -202,7 +201,7 @@ styles for small width devices
 
 	#clock{
 		width: auto;
-		margin: 0% 7% 10% 7%;
+		margin: 0% 10% 10% 10%;
 		height: auto;
 	}
 
@@ -211,14 +210,13 @@ styles for small width devices
 		color: #ffeee6;
 		padding: 3%;
 		font-family: 'Orbitron', sans-serif;
-		font-size: 5rem;
+		font-size: 4rem;
 		font-weight: bolder;
 	}
 
 	.background{
 		background: linear-gradient(black, #000099, #66c2ff, #ffcccc, #ffeee6);
 		width:100%;
-		height: 100%;
 		position: fixed;
 		top: 0px;
 		margin: 0px;
@@ -300,12 +298,11 @@ styles for small width devices
 	#content{
 		margin: auto;
 		width: 70%;
-		height: 70%;
 		
 	}	
 
 	form{
-		margin-top: 40% ;
+		margin-top: 10% ;
 		height: auto;
 	}
 
